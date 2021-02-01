@@ -1,27 +1,28 @@
+*{
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
-  background: #780206;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #67B26F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
-  
+  justify-content: space-between;
 }
 .header{
-  background:rgba(255,255,255,0.4);
+  background:rgba(255,255,255,0.2);
   border-bottom:1px solid white;
-  height: 3rem;
+  height: 2.5rem;
   display:flex;
   align-items: center;
   padding: 0 12px;
-  font-size: 1.5rem;
-  color: white;
+  font-size:1.2rem;
+  color:white;
   font-weight: bold;
 }
-
 .logo{
   height:1.8rem;
   width:1.8rem;
@@ -31,9 +32,47 @@
   background-position: center;
   background-size:cover;
 }
-
+.message{
+  background-color: red;
+  display: inline-block;
+}
 .text-input{
-  background:rgba(255,255,255,0.4);
-  border-bottom:1px solid white;
-  height: 2rem;
+  background:rgba(255,255,255,0.2);
+  border-top:1px solid white;
+  height: 2.5rem;
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.input{
+  border:1px solid white;
+  border-radius:1.6rem;
+  height:1.6rem;
+  width:calc(100% - 20px);
+  background: rgba(0,0,0,0.85);
+  color:white;
+  padding:0 10px;
+  outline:none;
+}
+.send-button{
+  position:absolute;
+  right:12px;
+  top:0.55rem;
+  border-radius:100%;
+  background:white;
+  color:black;
+  border:none;
+  height: 1.4rem;
+  width: 1.4rem;
+  cursor: pointer;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  outline:none;
+}
+.send-button[disabled]{
+  cursor: default;
+  background:grey;
 }
